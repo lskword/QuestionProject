@@ -6,8 +6,9 @@ var MongoClient = require('mongodb').MongoClient;
 var settings = require("../settings.js");
 //不管数据库什么操作，都是先连接数据库，所以我们可以把连接数据库
 //封装成为内部函数
-function _connectDB(callback) {
-    var url = settings.dburl;   //从settings文件中，都数据库地址
+
+var _connectDB=exports._connectDB=function(callback){
+    var url = settings.DB_URL;   //从settings文件中，都数据库地址
     //连接数据库
     MongoClient.connect(url, function (err, db) {
         if (err) {
@@ -130,3 +131,4 @@ exports.getAllCount = function (collectionName,callback) {
         });
     })
 }
+module.exports=exports;

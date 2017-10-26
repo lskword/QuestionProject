@@ -6,12 +6,23 @@
   </head>
   <body>
 
-    <form class="" action="/tijiao" method="get">
-      <input type="text" name="nr" value="">
-      <input type="submit" >
-    </form>
-    <% if(code==='8'){ %>
+      <form class="" action="/tijiao" method="get">
+        <input type="text" name="nr" value="">
+        <input type="submit" >
+      </form>
+      <% if(c){ %>
       <%=msg%>
-    <% } %>
-    </body>
+      <% }else{%>
+        <%=msg%>
+      <% } %>
+        <%for (var i = 0; i < result.length; i++) {%>
+          <div class="" style="border:1px solid red">
+
+              <p>用户名：<%=result[i].username%> <span style="float:right" uid='<%=result[i]._id%>'>删除</span></p>
+              <p>发布内容：<%=result[i].neirong%></p>
+              <p>发布时间：<%=result[i].data%></p>
+            </div>
+
+        <%}%>
+  </body>
 </html>
