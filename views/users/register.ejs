@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>注册页面</title>
+  <style>
+ #i1{
+ 	margin-top:100px ;
+ 	display: block;
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	float: left;
+	margin-left: 50px;
+}
+#i2{
+	margin-top: 30px;
+ 	display: block;
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	float: left;
+	margin-left: 50px;
+}
+#input1{
+	margin-top:100px ;
+	width: 300px;
+	height: 50px;
+	float: left;
+	border: 0;
+	outline: none;
+	background: #fefefe;
+}
+#input2{
+	margin-top: 30px;
+	width: 300px;
+	height: 50px;
+	float: left;
+	border: 0;
+	outline: none;
+	background: #fefefe;
+}
+#form{
+	position: relative;
+	display: block;
+	width: 500px;
+	height: 500px;
+	border: 1px solid red;
+	background: #eee;
+	margin: auto;
+  margin-top: 100px; 
+}
+#register{
+	width: 100px;
+	height: 30px;
+	position: absolute;
+	bottom: 20px;
+	left: 200px;
+}
+  </style>
+</head>
+<body>
+  <form action="/register" method="post" id="form">
+    <i id="i1">username:</i><input id="input1" type="text" name="username" value="" placeholder="请填写用户名">
+    <i id="i2">password:</i><input id="input2" type="password" name="password" value="" placeholder="请填写密码">
+    <input id="register" type="submit" name="" value="注册">
+  </form>
+</body>
+</html>
