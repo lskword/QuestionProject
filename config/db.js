@@ -6,8 +6,12 @@ var MongoClient = require('mongodb').MongoClient;
 var settings = require("../settings.js");
 //不管数据库什么操作，都是先连接数据库，所以我们可以把连接数据库
 //封装成为内部函数
+<<<<<<< HEAD
 
 var _connectDB=exports._connectDB=function(callback){
+=======
+function _connectDB(callback) {
+>>>>>>> 629c889f6c2752a265d34baa69b215790cb4d2ce
     var url = settings.DB_URL;   //从settings文件中，都数据库地址
     //连接数据库
     MongoClient.connect(url, function (err, db) {
@@ -28,7 +32,7 @@ function init(){
             console.log(err);
             return;
         }
-        db.collection('users').createIndex(
+        db.collection('wenti').createIndex(
             { "username": 1},
             null,
             function(err, results) {
